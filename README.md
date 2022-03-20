@@ -1,1 +1,1 @@
-# image_watermarking
+# Image Watermarking
