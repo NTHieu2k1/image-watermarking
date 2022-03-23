@@ -49,7 +49,7 @@ class DCT_Watermark(Watermark):
         for i in range(0, sig_size * size, size):
             for j in range(0, sig_size * size, size):
                 v = cv2.dct(np.float32(B[i:i+size, j:j+size]))
-                if v[size-1, size-1] > self.Q / 2:
+                if v[size-1, size-1] > 0:
                     ext_sig[(i//size) * sig_size + j//size] = 1
         return [ext_sig]
 
