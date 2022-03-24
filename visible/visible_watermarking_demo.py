@@ -1,3 +1,4 @@
+import cv2 as cv
 from visible_watermarking import VisibleWatermarking
 
 visible_watermaking_maker = VisibleWatermarking(orig_image_path='fox.jpg',
