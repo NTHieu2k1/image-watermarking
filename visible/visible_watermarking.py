@@ -30,7 +30,7 @@ class VisibleWatermarking:
         patch = self.image[-20-watermark_height:-20, -20-watermark_width:-20, :]
         # Implement visible watermarking on the patch extracted first
         watermark_patch = cv.addWeighted(self.watermark, self.alpha, patch, 1 - self.alpha, 0)
-        # Apply watermarked batch to the image
+        # Apply watermarked patch to the image
         final_image = self.image.copy()
         final_image[-20-watermark_height:-20, -20-watermark_width:-20, :] = watermark_patch
         return final_image
